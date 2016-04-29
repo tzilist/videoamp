@@ -1,0 +1,29 @@
+{
+  "name": "videoamp",
+  "version": "0.0.1",
+  "description": "Videoamp Backend Challenge - Theodore Zilist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzilist/videoamp.git"
+  },
+  "author": "Theodore Zilist",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tzilist/videoamp/issues"
+  },
+  "homepage": "https://github.com/tzilist/videoamp#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-import": "^1.6.1",
+    "eslint-plugin-jsx-a11y": "^1.0.4",
+    "eslint-plugin-react": "^5.0.1"
+  }
+}
