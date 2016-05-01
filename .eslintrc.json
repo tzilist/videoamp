@@ -1,0 +1,16 @@
+
+{
+  "extends": "airbnb",
+  "root": true,
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "__dirname": true
+  },
+  "rules": {
+      "no-trailing-spaces": [2, { "skipBlankLines": true }],
+      "indent": 0
+  }
+}

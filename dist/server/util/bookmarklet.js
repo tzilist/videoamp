@@ -1,0 +1,1 @@
+"use strict";!function(){var t=document.createElement("script");t.setAttribute("src","http://localhost:3000/findads"),document.body.appendChild(t)}();
