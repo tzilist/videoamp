@@ -7,17 +7,15 @@ import browserify from 'browserify';
 import gutil from 'gulp-util';
 import source from 'vinyl-source-stream';
 
-const babelify = (folder) => {
+const babelify = (folder) => (
   gulp.src([`${folder}/**/*`])
 		.pipe(plumber())
 		.pipe(babel())
     .pipe(uglify())
-		.pipe(gulp.dest(`dist/${folder}`));
-};
+		.pipe(gulp.dest(`dist/${folder}`))
+);
 
-gulp.task('server', () => {
-	babelify('server');
-});
+gulp.task('server', () => babelify('server'));
 
 gulp.task('client', () => {
   babelify('client');
