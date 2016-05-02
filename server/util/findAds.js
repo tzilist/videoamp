@@ -1,3 +1,0 @@
-(function findAds() {
-  alert('works!');
-}());

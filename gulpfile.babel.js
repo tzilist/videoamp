@@ -4,16 +4,24 @@ import plumber from 'gulp-plumber';
 import nodemon from 'gulp-nodemon';
 import uglify from 'gulp-uglify';
 
-gulp.task('babel', () => {
-	gulp.src(['server/**/*'])
+const babelify = (source) => {
+  gulp.src([`${source}/**/*`])
 		.pipe(plumber())
 		.pipe(babel())
     .pipe(uglify())
-		.pipe(gulp.dest('dist/server'));
+		.pipe(gulp.dest(`dist/${source}`));
+};
+
+gulp.task('server', () => {
+	babelify('server');
+});
+
+gulp.task('client', () => {
+  babelify('client');
 });
 
 gulp.task('watch', () => {
-	gulp.watch(['server/**/*'], ['babel']);
+	gulp.watch(['server/**/*', 'client/**/*'], ['server', 'client']);
 });
 
 
@@ -24,4 +32,4 @@ gulp.task('start', () => {
 	});
 });
 
-gulp.task('default', ['babel', 'watch', 'start']);
+gulp.task('default', ['server', 'client', 'watch', 'start']);

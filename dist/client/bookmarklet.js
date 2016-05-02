@@ -1,0 +1,1 @@
+"use strict";!function(){var t=document.createElement("script");t.setAttribute("src","https://localhost:3000/adparse"),document.body.appendChild(t)}();
