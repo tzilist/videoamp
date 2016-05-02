@@ -1,0 +1,1 @@
+"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}var _test=require("./test.js"),_test2=_interopRequireDefault(_test);!function(){document.getElementsByTagName("img"),document.getElementsByTagName("video"),document.getElementsByTagName("iframe");console.log(_test2["default"])}();

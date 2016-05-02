@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 
 app.get('/adparse', (req, res) => {
-	res.sendFile(path.join(__dirname, 'util/jsInjector.js'));
+	res.sendFile(path.join(__dirname, '../client/injector/adParserBundle.js'));
 });
 
 app.get('/', (req, res) => {

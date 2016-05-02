@@ -1,1 +1,0 @@
-"use strict";!function(){var e=document.getElementsByTagName("img"),t=document.getElementsByTagName("video"),m=document.getElementsByTagName("iframe");console.log(e,t,m)}();
