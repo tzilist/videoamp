@@ -1,5 +1,6 @@
 import parser from './parserUtils';
 import getFilters from './getFilters';
+import postAds from './postAds';
 
 (function findAds() {
   // It is safe to skip parsing images as it will increase speed of parsing and the fact that
@@ -16,5 +17,6 @@ import getFilters from './getFilters';
   getFilters()
     .then(filters => {
       parser(filters, ads, videos, iframes);
-    });
+    })
+    .then(postAds(ads));
 }());

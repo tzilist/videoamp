@@ -25,8 +25,8 @@ app.get('/', (req, res) => {
 	res.send('Home');
 });
 
-app.post('/ads', (req, res) => {
-	res.send('Working!');
+app.post('/postads', (req, res) => {
+	console.log(req);
 });
 
 /*
