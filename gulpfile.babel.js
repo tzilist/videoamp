@@ -29,7 +29,8 @@ gulp.task('client', () => {
 });
 
 gulp.task('watch', () => {
-	gulp.watch(['./server/**/*', './client/**/*'], ['server', 'default']);
+	gulp.watch(['./server/**/*'], ['server']);
+  gulp.watch(['./client/**/*'], ['client']);
 });
 
 
