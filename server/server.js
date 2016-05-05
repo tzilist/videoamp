@@ -8,8 +8,17 @@ const app = express();
 
 app.use(cors());
 
+// send injectable JS on request
 app.get('/adparse', (req, res) => {
 	res.sendFile(path.join(__dirname, '../client/injector/adParserBundle.js'));
+});
+
+/*
+* injected JS will request easylist filters.
+* Seperated this from the initial request to make modification of filters easier in the future.
+*/
+app.get('/adfilters', (req, res) => {
+	res.sendFile(path.join(__dirname, '../../filters/easylist.json'));
 });
 
 app.get('/', (req, res) => {

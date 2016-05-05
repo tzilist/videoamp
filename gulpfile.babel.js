@@ -29,7 +29,7 @@ gulp.task('client', () => {
 });
 
 gulp.task('watch', () => {
-	gulp.watch(['./server/**/*', './client/**/*'], ['server', 'client']);
+	gulp.watch(['./server/**/*', './client/**/*'], ['server', 'default']);
 });
 
 
