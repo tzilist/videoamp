@@ -1,3 +1,4 @@
+// Preforms XMLHttpRequest from server to get filters
 const getFilters = () => (
    new Promise((res, rej) => {
     const xhr = new XMLHttpRequest();

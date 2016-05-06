@@ -16,7 +16,6 @@ const filterCheck = (element, filter, adObj, type) => {
       width: element.width,
     });
   }
-  return;
 };
 
 /**
@@ -34,9 +33,7 @@ function parser(filters, adObj, videos, iframes) {
       filterCheck(videos[i], filter, adObj, 'vid');
     }
     for (const i in iframes) {
-      if (iframes[i]) {
         filterCheck(iframes[i], filter, adObj, 'ifr');
-      }
     }
   });
   return adObj;

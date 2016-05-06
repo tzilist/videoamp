@@ -2,10 +2,14 @@ import express from 'express';
 import path from 'path';
 import cors from 'cors';
 import https from 'https';
+import bodyParser from 'body-parser';
 import fs from 'fs';
+import insertAds from './utils/insertAds.js';
 
 const app = express();
 
+// Use bodyParser and cors for POST requests
+app.use(bodyParser.json());
 app.use(cors());
 
 // send injectable JS on request
@@ -21,12 +25,9 @@ app.get('/adfilters', (req, res) => {
 	res.sendFile(path.join(__dirname, '../../filters/easylist.json'));
 });
 
-app.get('/', (req, res) => {
-	res.send('Home');
-});
 
 app.post('/postads', (req, res) => {
-	console.log(req);
+	res.status(200).send('');
 });
 
 /*
