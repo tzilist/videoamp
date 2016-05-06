@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "gulp default",
     "start": "node dist/server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel-core/register test/test.js"
   },
   "repository": {
     "type": "git",
@@ -36,10 +36,12 @@
     "eslint-plugin-import": "^1.6.1",
     "eslint-plugin-jsx-a11y": "^1.0.4",
     "eslint-plugin-react": "^5.0.1",
+    "expect": "^1.19.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-nodemon": "^2.0.6",
     "gulp-plumber": "^1.1.0",
-    "gulp-uglify": "^1.5.3"
+    "gulp-uglify": "^1.5.3",
+    "mocha": "^2.4.5"
   }
 }

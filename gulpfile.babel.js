@@ -7,6 +7,7 @@ import browserify from 'browserify';
 import gutil from 'gulp-util';
 import source from 'vinyl-source-stream';
 
+// used for client/server side ES6 -> ES5 compiling
 const babelify = (folder) => (
   gulp.src([`${folder}/**/*`])
 		.pipe(plumber())
@@ -16,6 +17,9 @@ const babelify = (folder) => (
 );
 
 gulp.task('server', () => babelify('server'));
+
+// Preforms babelify and then browserifies the client side code into one bundle.
+// Allows for modularization of client side code
 
 gulp.task('client', () => {
   babelify('client');
@@ -28,11 +32,14 @@ gulp.task('client', () => {
     .pipe(gulp.dest('dist/client/injector'));
 });
 
+// Automatically recompiles and rebundles as needed on file changes
+
 gulp.task('watch', () => {
 	gulp.watch(['./server/**/*'], ['server']);
   gulp.watch(['./client/**/*'], ['client']);
 });
 
+// Nodemon for quick server restart
 
 gulp.task('start', () => {
 	nodemon({
