@@ -2,6 +2,13 @@ import parser from './parserUtils';
 import getFilters from './getFilters';
 import adPost from './adPost';
 
+/**
+* IIFE that is sent to the user when the bookmarklet is used. This JS is the inserted into the
+* users current webpage and executed. This function finds all iframes and videos on a page, preforms
+* an XMLHttpRequest for the EasyList filters, compares the sources of iframes and videos against the
+* filters, and sends any matches back to the server.
+**/
+
 (function findAds() {
   // It is safe to skip parsing images as it will increase speed of parsing and the fact that
   // most ads are placed into an iframe to prevent external JS from injecting onto main page

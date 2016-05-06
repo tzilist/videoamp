@@ -26,8 +26,8 @@ app.get('/adfilters', (req, res) => {
 });
 
 
-app.post('/postads', (req, res) => {
-	res.status(200).send('');
+app.post('/postads', insertAds, (req, res) => {
+	res.status(200).send('done!');
 });
 
 /*
